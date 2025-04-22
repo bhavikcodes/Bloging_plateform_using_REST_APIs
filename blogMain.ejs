@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOGS</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Blogs</h1>
+    <div class="form">
+        <form method="get" action="/blogs/new">
+            <button id="btn">Write a Blog</button>
+        </form>
+    </div>
+   
+    <div class="container">
+        <% for(let post of array){ %>
+            <div class="b">
+                <h3>@<%=post.username%></h3><br><%=post.content%>
+                 <a href="http://localhost:3000/blogs/<%=post.id%>">view more</a>
+                 <br>
+                 <div class="final">
+                    <form method="get" action="/blogs/<%=post.id%>/edit">
+                        <button id="btn2">Edit</button>
+                     </form>
+                     <form method="post" action="/blogs/<%=post.id%>?_method=Delete">
+                        <button id="btn2" style="margin-left: 5px; margin-right: 5px;">Delete</button>
+                     </form>
+                 </div>
+                 
+            </div>
+
+        <%}%>
+        
+    </div>
+   
+</body>
+</html>

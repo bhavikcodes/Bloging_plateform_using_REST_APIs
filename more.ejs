@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=post.username%>' Blog</title>
+    <link rel="stylesheet" href="/more.css">
+</head>
+<body>
+    <h1>Blogs</h1>
+   <h4>Post id : <%=post.id%> </h4>
+    <div class="container">
+            <div class="b">
+                <h3>@<%=post.username%></h3><br><%=post.content%>
+            </div>
+            <button id="btn"><a href="http://localhost:3000/blogs">back</a></button>
+    </div>
+   
+</body>
+</html>
+<!-- 
+<button><a href="http://localhost:3000/blogs/<%=post.id%>">view more</a></button> -->

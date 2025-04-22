@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+    <h1>Make Changes</h1>
+    <div class="container">
+        <div class="form">
+            <h2>username : <%= post.username %></h2>
+            <h4>post id : <%= post.id %></h4>
+            <form method="post" action="/blogs/<%=post.id%>?_method=patch">
+               
+               <textarea rows="18" cols="60" name="content" placeholder=" enter your blog here"><%=post.content %></textarea>
+               <br><br>
+               <button id="btn">Save Changes</button>
+            </form>
+
+        </div>
+        
+    </div>
+</body>
+</html>
